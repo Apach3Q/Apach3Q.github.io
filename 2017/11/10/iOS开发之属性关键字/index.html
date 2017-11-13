@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel; 定义一个UILabel，依次解读下： @property：程序在编译阶段自动生成getter和setter方法。我理解的就是 @propert">
+<meta name="description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel;">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Property Keywords For iOS Development">
 <meta property="og:url" content="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/10/iOS开发之属性关键字/index.html">
 <meta property="og:site_name" content="Apach3&#39;s Blog">
-<meta property="og:description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel; 定义一个UILabel，依次解读下： @property：程序在编译阶段自动生成getter和setter方法。我理解的就是 @propert">
+<meta property="og:description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-10T12:28:18.229Z">
+<meta property="og:updated_time" content="2017-11-13T09:38:03.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Property Keywords For iOS Development">
-<meta name="twitter:description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel; 定义一个UILabel，依次解读下： @property：程序在编译阶段自动生成getter和setter方法。我理解的就是 @propert">
+<meta name="twitter:description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel;">
 
 
 
@@ -304,6 +304,7 @@
 <hr>
 <p>现在最常用的写法就是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property (nonatomic, strong) UILable *myLabel;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>定义一个UILabel，依次解读下：</p>
 <p><code>@property</code>：<br>程序在编译阶段自动生成<code>getter</code>和<code>setter</code>方法。我理解的就是 <code>@property……</code>一句话，就代替了声明成员变量、属性、再<code>@synthesize 成员变量 = _对应属性;</code>。这样剩去了好多行代码，还可以在属性关键字设置相应的作用。</p>
 <p><code>(……)</code>：<br>括号内的是属性关键字。对于普通OC对象来说，默认的修饰符是<code>atomic</code>、<code>strong</code>、<code>readwrite</code>；对于基本数据类型来说，默认修饰符是<code>nonatomic</code>、<code>assign</code>、<code>readwrite</code>。</p>
