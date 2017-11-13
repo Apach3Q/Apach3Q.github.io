@@ -232,6 +232,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/13/The-Differences-between-TCP-UDP-HTTP-HTTPS-GET-POST/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Apach3">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Apach3's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/13/The-Differences-between-TCP-UDP-HTTP-HTTPS-GET-POST/" itemprop="url">The Differences between TCP&UDP/HTTP&HTTPS/GET&POST</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-13T10:29:17+08:00">
+                2017-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Summarize the differences between tcp&amp;udp/http&amp;https/get&amp;post and record the notes.</strong><br><strong>In the study stage, if has the question welcome to correct, discusses together.<a href="https://apach3q.github.io/" target="_blank" rel="external">@Apach3</a></strong></p>
+<hr>
+<h2 id="TCP-amp-UDP"><a href="#TCP-amp-UDP" class="headerlink" title="TCP&amp;UDP"></a>TCP&amp;UDP</h2><p><strong>TCP：</strong><br>    TCP is a connection-oriented、reliable、based on byte throttling transport-layer communication protocol.<br><strong>UDP：</strong><br>    UDP is a connectionless、unreliable、message-based transport-layer communication protocol.</p>
+<ol>
+<li>TCP is connection-oriented, UDP is connecitonless;</li>
+<li>TCP provides reliable services, data transmitted through TCP error-free、not lost、not duplicated、ordered to arrive, UDP to maximize efforts to deliver、fast、not guarantee reliable delivery;</li>
+<li>TCP based on byte throttling, with flow control, UDP message-based, not have flow control, congestion on the network will not make the source host transmission rate reduction (such as IP telephone, real-time video conferencing, etc.);</li>
+<li>TCP connections only can point-to-point, UDP support a pair of one or one pairs、many pairs of one、many pairs;</li>
+<li>The logical communication channel of TCP is a reliable channel with Full-duplex, and UDP is unreliable channel.</li>
+<li>TCP header cost 20 bytes, UDP header cost 8 bytes.</li>
+</ol>
+<p><strong>TCP：</strong><br>    TCP（Transmission Control Protocol 传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通讯协议。<br><strong>UDP：</strong><br>    UDP（User Datagram Protocol 用户数据报协议）是一种面向无连接的、不可靠的、基于报文的传输层协议。</p>
+<ol>
+<li>TCP面向连接（打电话需要建立连接），UDP无连接的；</li>
+<li>TCP提供可靠的服务，通过TCP传输的数据无差错、不丢失、不重复、按序到达，UDP尽最大努力交付，速度快，不保证可靠交付；</li>
+<li>TCP面向字节流，具有流量控制，UDP面向报文，不具备流量控制，网络上出现拥塞不会使源主机的发送速率降低（如ip电话，实时视频会议等）；</li>
+<li>TCP连接只能点到点的，UDP支持一对一、一对多、多对一、多对多；</li>
+<li>TCP的逻辑通信信道是全双工的可靠信道，UDP则是不可靠信道；</li>
+<li>TCP首部开销20字节，UDP首部开销8个字节。</li>
+</ol>
+<hr>
+<h2 id="HTTP-amp-HTTPS"><a href="#HTTP-amp-HTTPS" class="headerlink" title="HTTP&amp;HTTPS"></a>HTTP&amp;HTTPS</h2><p><strong>HTTP：</strong><br>    HTTP is one of the most widely used network protocols, a standard  for client and server-side request answering, which is used for the transfer protocol for the WWW servers to transfer hypertext to local browsers.<br><strong>HTTPS：</strong><br>    HTTPS is a security-targeted HTTP channel that joins the SSL layer under HTTP, and the security base of HTTPS is SSL, so the details of the encryption require SSL.</p>
+<ol>
+<li>HTTPS protocol requires the application of CA certificate, HTTP does’t need;</li>
+<li>HTTP is Hypertext Transfer Protocol, information is plaintext transmission, HTTPS is a secure SSL encryption transmission protocol;</li>
+<li>The connection mode and port number of both different, the former is 80, the latter is 443;</li>
+<li>HTTP connection is simple and unsafe, the HTTPS protocol is built by the SSL+HTTP protocol,and can be Encrypted Transmission、Identity Authentication, more secure.</li>
+</ol>
+<p><strong>HTTP：</strong><br>    互联网上使用最广泛的一种网络协议，是一个客户端和服务端请求应答的标准（TCP），用于WWW服务器传输超文本到本地浏览器的传输协议。<br><strong>HTTPS：</strong><br>    以安全为目标的HTTP通道，HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
+<ol>
+<li>HTTPS协议需要申请CA证书，http不需要；</li>
+<li>HTTP是超文本传输协议，信息是明文传输，HTTPS则是具有安全性的SSL加密传输协议；</li>
+<li>两者的连接方式和端口号也不同，前者为80，后者为443；</li>
+<li>HTTP连接简单不安全，HTTPS协议由SSL+HTTP协议构建的，可进行加密传输、身份认证的网络协议，更安全。</li>
+</ol>
+<hr>
+<h2 id="GET-amp-POST"><a href="#GET-amp-POST" class="headerlink" title="GET&amp;POST"></a>GET&amp;POST</h2><ol>
+<li>GET requests parameters remain in browser history because they are part of the URL, the POST requests parameters are not saved in browser history;</li>
+<li>GET requests can be bookmarked, POST can not be;</li>
+<li>GET requests are re-excuted but may not be re-submitted to server if the HTML is stored in the browser cache, under POST requests, the browser usually alerts the user that data will need to be re-submitted;</li>
+<li>GET requests can send parameters but the parameter data is limited to what we can stuff into the request link(URL), post requests can send parameters, including uploading files, to the server;</li>
+<li>GET is less secure compared to POST because data sent is part of the URL, POST is a little safer than GET because the parameters are not stored in browser history or in web server logs;</li>
+<li><p>POST requests has no restrictions on form data length;</p>
+</li>
+<li><p>GET请求参数保留在浏览器历史记录中，为URL的一部分，POST请求参数不保存在浏览器历史记录中；</p>
+</li>
+<li>GET请求可以作为书签，POST不可以；</li>
+<li>GET请求可重复执行，但如果HTML储存在浏览器缓存中，则可能不会重启提交到服务器，POST请求下浏览器通常会提醒用户需要重新提交数据；</li>
+<li>GET请求可以发送参数但仅限于在请求行中输入内容，POST可以将参数（包括上传文件）发送到服务器；</li>
+<li>GET与POST相比，获取的安全性较差，因为发送的数据是url的一部分，POST请求的这些参数不存储在浏览器历史记录或web服务器日志中；</li>
+<li>POST请求对表单数据长度无限制；</li>
+</ol>
+<hr>
+<p><strong>Stay hungry. Stay foolish.</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/10/iOS开发之属性关键字/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -532,7 +705,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -545,7 +718,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
