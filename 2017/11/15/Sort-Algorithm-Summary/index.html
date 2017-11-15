@@ -88,7 +88,7 @@
 <meta property="og:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://github.com/img/Insertion-Sort.gif">
-<meta property="og:updated_time" content="2017-11-15T05:15:29.970Z">
+<meta property="og:updated_time" content="2017-11-15T05:42:22.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sort Algorithm Summary">
 <meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
@@ -314,10 +314,12 @@
 <p><img src="/img/Insertion-Sort.gif" alt="Insertion Sort"></p>
 <p><strong>Insertion sort code in C:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void insertion_sort(int arr[], int len) &#123;</span><br><span class="line">    for (int i = 1, j = 0 ; i &lt; len; ++i) &#123;    //compare (len - 1) times, until the last number left</span><br><span class="line">        int temp = arr[i];  //temp is the key number</span><br><span class="line">        for (j = i - 1; j &gt;= 0 &amp;&amp; arr[j] &gt; temp; --j)   //compare all numbers before the key number</span><br><span class="line">            arr[j + 1] = arr[j];    //find the value lager than the key number and insert it behind the key</span><br><span class="line">        arr[j + 1] = temp;     //insert the key number</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Best, worst, and average cases</strong></p>
+<p><strong>Best, worst, and average cases:</strong></p>
 <p>The best case input is an array that is already sorted. In this case insertion sort has a linear running time (i.e., O(n)). During each iteration, the first remaining element of the input is only compared with the right-most element of the sorted subsection of the array.<br>The simplest worst case input is an array sorted in reverse order. The set of all worst case inputs consists of all arrays where each element is the smallest or second-smallest of the elements before it. In these cases every iteration of the inner loop will scan and shift the entire sorted subsection of the array before inserting the next element. This gives insertion sort a quadratic running time (i.e., O(n2)).<br>The average case is also quadratic, which makes insertion sort impractical for sorting large arrays. However, insertion sort is one of the fastest algorithms for sorting very small arrays, even faster than quicksort; indeed, good quicksort implementations use insertion sort for arrays smaller than a certain threshold, also when arising as subproblems; the exact threshold must be determined experimentally and depends on the machine, but is commonly around ten.</p>
+<p><strong>最佳，最差和平均情况：</strong></p>
 <p>最好的情况下就是数组已经是排好了序的。这种情况下插入排序具有线性运行时间（即时间复杂度O(n)）。每次迭代期间输入的第一个元素仅与排序数组的最右侧元素进行比较。<br>最简单的最坏情况是倒序排序的数组。每个元素是其之前元素的最小或次最小值。在这种情况下每次循环都会扫描并且移动这个数组整个排序的子部分。这种情况下的排序时间复杂度为二次的（即O(n^2)）。<br>平均情况下的时间复杂度也是二次的，这使得插入排序在排列大型数组的情况下是不切实际的。然而插入排序是排序非常小的数组最快的算法之一，甚至速度大过快速排序；实际上，好的快速排序对于小于某个阈值的数组的时候会使用插入排序，同样作为一个字问题出现的就是阈值必须通过实验来确定，取决于机器，但是通常在10左右。</p>
 <hr>
+<h2 id="Shell-Sort"><a href="#Shell-Sort" class="headerlink" title="Shell Sort"></a>Shell Sort</h2><p><strong>Base Ideas:</strong></p>
 
       
     </div>
@@ -485,7 +487,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-Sort"><span class="nav-number">3.</span> <span class="nav-text">Shell Sort</span></a></li></ol></div>
             
 
           </div>
