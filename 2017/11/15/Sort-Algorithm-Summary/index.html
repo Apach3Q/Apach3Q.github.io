@@ -89,7 +89,11 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://github.com/img/Insertion-Sort.gif">
 <meta property="og:image" content="https://github.com/img/Shell-Sort.gif">
-<meta property="og:updated_time" content="2017-11-15T07:13:38.791Z">
+<meta property="og:image" content="https://github.com/img/Shell-Sort1.svg">
+<meta property="og:image" content="https://github.com/img/Shell-Sort2.svg">
+<meta property="og:image" content="https://github.com/img/Shell-Sort1.svg">
+<meta property="og:image" content="https://github.com/img/Shell-Sort2.svg">
+<meta property="og:updated_time" content="2017-11-15T08:45:30.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sort Algorithm Summary">
 <meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
@@ -337,6 +341,16 @@
 <p><img src="/img/Shell-Sort.gif" alt="Shell Sort"></p>
 <p><strong>Insertion sort code in C:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">void ShellInsertSort(int a[], int n, int dk) &#123;</span><br><span class="line">    for(int i = dk; i &lt; n; ++i)&#123;</span><br><span class="line">        if(a[i] &lt; a[i-dk]) &#123;          //if the i-th element is greater than the i-1 element, than insert.else, insert after moving ordered list</span><br><span class="line">            int j = i - dk;</span><br><span class="line">            int x = a[i];           //store to be sorted elements</span><br><span class="line">            a[i] = a[i - dk];         //first, move one element backward</span><br><span class="line">            while(x &lt; a[j]) &#123;     //find the insertion position in the sorted list</span><br><span class="line">                a[j + dk] = a[j];</span><br><span class="line">                j -= dk;             //element backward</span><br><span class="line">            &#125;</span><br><span class="line">            a[j + dk] = x;            //insert into the correct position</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void shellSort(int a[], int n) &#123;</span><br><span class="line">    int dk = n/2;       //Sort in increments of n/2 first</span><br><span class="line">    while( dk &gt;= 1  ) &#123;</span><br><span class="line">        ShellInsertSort(a, n, dk);</span><br><span class="line">        dk = dk/2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Gap Sequence:</strong></p>
+<p>The gap selection is an important part of Shell Sort. Donald Shell suggested that the gap be taken from half to 1. Although this can be better than the O(n^2) algorithm(Insertion Sort), there is a room for reducing the average time performance. The best gap sequence is proposed by Sedgewick(1, 5, 19, 41, 109, …), and this sequence is derived from the two formulas,<img src="/img/Shell-Sort1.svg" alt="Shell Sort1"> and <img src="/img/Shell-Sort2.svg" alt="Shell Sort2">. Study also shows that ‘Comparison is the most important operation not exchange in Shell Sort’. Shell Sort faster than Insertion Sort in using this gap sequence, even in small array faster than Quick Sort and Heap Sort, but on Shell Sort involves a large amount of data still slower than Quick Sort.</p>
+<p><strong>步长序列：</strong></p>
+<p>步长的选择是希尔排序的重要部分。Donald Shell最初建议步长取半值直到步长到1。虽然这样取可以比O(n^2)类的算法（插入排序）更好，但这样仍然有减少平均时间复杂度的余地。已知的最好步长序列是由Sedgewick提出的(1, 5, 19, 41, 109,…)，该序列的项来自<img src="/img/Shell-Sort1.svg" alt="Shell Sort1">和<img src="/img/Shell-Sort2.svg" alt="Shell Sort2">这两个算式。这项研究也表明“比较在希尔排序中是最主要的操作，而不是交换。”用这样步长序列的希尔排序比插入排序要快，甚至在小数组中比快速排序和堆排序还快，但是在涉及大量数据时希尔排序还是比快速排序慢。</p>
+<p><strong>Time Performance:</strong></p>
+<p>Worst-case performance:O(n^2) (worst known gap sequence)、O(nlog2n) (best known gap sequence)<br>Best-case performance:O(nlogn)<br>Average performance:depends on gap sequence</p>
+<p><strong>时间复杂度：</strong></p>
+<p>最坏时间复杂度：根据步长序列的不同而不同。已知最差的：O(n^2)、最好的：O(nlog2n)<br>最优时间复杂度：O(nlogn)<br>平均时间复杂度：根据步长序列的不同而不同。</p>
+<hr>
+<p>未完待续！</p>
 
       
     </div>
