@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="Apach3&#39;s Blog">
 <meta property="og:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://github.com/Users/apach3/Downloads/Insertion-sort-example-300px.gif">
-<meta property="og:updated_time" content="2017-11-15T03:35:12.229Z">
+<meta property="og:image" content="https://github.com/img/Insertion-Sort.gif">
+<meta property="og:updated_time" content="2017-11-15T05:15:29.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sort Algorithm Summary">
 <meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
-<meta name="twitter:image" content="https://github.com/Users/apach3/Downloads/Insertion-sort-example-300px.gif">
+<meta name="twitter:image" content="https://github.com/img/Insertion-Sort.gif">
 
 
 
@@ -311,7 +311,7 @@
 <p>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.</p>
 <p><strong>基本思想：</strong></p>
 <p>循环插入排序，每次重复使用一个输入元素，并增长排序后的输出列表。在每次循环中，插入排序从输入数据中移除一个元素，找到它在排序列表中的位置，将它插入到那里。重复此操作直到没有输入元素。</p>
-<p><img src="/Users/apach3/Downloads/Insertion-sort-example-300px.gif" alt="Insertion Sort"></p>
+<p><img src="/img/Insertion-Sort.gif" alt="Insertion Sort"></p>
 <p><strong>Insertion sort code in C:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void insertion_sort(int arr[], int len) &#123;</span><br><span class="line">    for (int i = 1, j = 0 ; i &lt; len; ++i) &#123;    //compare (len - 1) times, until the last number left</span><br><span class="line">        int temp = arr[i];  //temp is the key number</span><br><span class="line">        for (j = i - 1; j &gt;= 0 &amp;&amp; arr[j] &gt; temp; --j)   //compare all numbers before the key number</span><br><span class="line">            arr[j + 1] = arr[j];    //find the value lager than the key number and insert it behind the key</span><br><span class="line">        arr[j + 1] = temp;     //insert the key number</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>Best, worst, and average cases</strong></p>
@@ -643,14 +643,6 @@
 
 
 
-
-	
-
-
-
-
-
-  
 
 
 
