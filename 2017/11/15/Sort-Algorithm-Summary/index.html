@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Computer Network," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="Summarized the differences between tcp&amp;amp;udp/http&amp;amp;https/get&amp;amp;post and record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  TCP&amp;amp;UDPTCP：">
-<meta name="keywords" content="Computer Network">
+<meta name="description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Differences between TCP&amp;UDP&#x2F;HTTP&amp;HTTPS&#x2F;GET&amp;POST">
-<meta property="og:url" content="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/13/The-Differences-between-TCP-UDP-HTTP-HTTPS-GET-POST/index.html">
+<meta property="og:title" content="Sort Algorithm Summary">
+<meta property="og:url" content="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/15/Sort-Algorithm-Summary/index.html">
 <meta property="og:site_name" content="Apach3&#39;s Blog">
-<meta property="og:description" content="Summarized the differences between tcp&amp;amp;udp/http&amp;amp;https/get&amp;amp;post and record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  TCP&amp;amp;UDPTCP：">
+<meta property="og:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-15T01:47:42.516Z">
+<meta property="og:image" content="https://github.com/Users/apach3/Downloads/Insertion-sort-example-300px.gif">
+<meta property="og:updated_time" content="2017-11-15T03:35:12.229Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Differences between TCP&amp;UDP&#x2F;HTTP&amp;HTTPS&#x2F;GET&amp;POST">
-<meta name="twitter:description" content="Summarized the differences between tcp&amp;amp;udp/http&amp;amp;https/get&amp;amp;post and record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  TCP&amp;amp;UDPTCP：">
+<meta name="twitter:title" content="Sort Algorithm Summary">
+<meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
+<meta name="twitter:image" content="https://github.com/Users/apach3/Downloads/Insertion-sort-example-300px.gif">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/13/The-Differences-between-TCP-UDP-HTTP-HTTPS-GET-POST/"/>
+  <link rel="canonical" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/15/Sort-Algorithm-Summary/"/>
 
 
 
 
 
-  <title>The Differences between TCP&UDP/HTTP&HTTPS/GET&POST | Apach3's Blog</title>
+  <title>Sort Algorithm Summary | Apach3's Blog</title>
   
 
 
@@ -233,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/13/The-Differences-between-TCP-UDP-HTTP-HTTPS-GET-POST/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/15/Sort-Algorithm-Summary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Apach3">
@@ -250,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">The Differences between TCP&UDP/HTTP&HTTPS/GET&POST</h1>
+          <h1 class="post-title" itemprop="name headline">Sort Algorithm Summary</h1>
         
 
         <div class="post-meta">
@@ -262,8 +264,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-13T10:29:17+08:00">
-                2017-11-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-15T09:40:40+08:00">
+                2017-11-15
               </time>
             
 
@@ -300,62 +302,22 @@
       
 
       
-        <p><strong>Summarized the differences between tcp&amp;udp/http&amp;https/get&amp;post and record the notes.</strong><br><strong>In the study stage, if has the question welcome to correct, discusses together.<a href="https://apach3q.github.io/" target="_blank" rel="external">@Apach3</a></strong></p>
+        <p><strong>Reference a lot of online information and summarized the various sorting algorithms, record the notes.</strong><br><strong>In the study stage, if has the question welcome to correct, discusses together.<a href="https://apach3q.github.io/" target="_blank" rel="external">@Apach3</a></strong></p>
 <hr>
-<h2 id="TCP-amp-UDP"><a href="#TCP-amp-UDP" class="headerlink" title="TCP&amp;UDP"></a>TCP&amp;UDP</h2><p><strong>TCP：</strong><br>    TCP is a connection-oriented、reliable、based on byte throttling transport-layer communication protocol.<br><strong>UDP：</strong><br>    UDP is a connectionless、unreliable、message-based transport-layer communication protocol.</p>
-<ol>
-<li>TCP is connection-oriented, UDP is connecitonless;</li>
-<li>TCP provides reliable services, data transmitted through TCP error-free、not lost、not duplicated、ordered to arrive, UDP to maximize efforts to deliver、fast、not guarantee reliable delivery;</li>
-<li>TCP based on byte throttling, with flow control, UDP message-based, not have flow control, congestion on the network will not make the source host transmission rate reduction (such as IP telephone, real-time video conferencing, etc.);</li>
-<li>TCP connections only can point-to-point, UDP support a pair of one or one pairs、many pairs of one、many pairs;</li>
-<li>The logical communication channel of TCP is a reliable channel with Full-duplex, and UDP is unreliable channel.</li>
-<li>TCP header cost 20 bytes, UDP header cost 8 bytes.</li>
-</ol>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Nowadays, data is everywhere and sorting the data is the first step.There are eight kinds of commonly used sorting algorithms: Insertion  Sort、Shell Sort、Selection Sort、Heap Sort、Bubble Sort、Quick Sort、Merge Sort and Radix Sort.Next I will summarize each sorting algorithm.</p>
 <a id="more"></a>
-<p><strong>TCP：</strong><br>    TCP（Transmission Control Protocol 传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通讯协议。<br><strong>UDP：</strong><br>    UDP（User Datagram Protocol 用户数据报协议）是一种面向无连接的、不可靠的、基于报文的传输层协议。</p>
-<ol>
-<li>TCP面向连接（打电话需要建立连接），UDP无连接的；</li>
-<li>TCP提供可靠的服务，通过TCP传输的数据无差错、不丢失、不重复、按序到达，UDP尽最大努力交付，速度快，不保证可靠交付；</li>
-<li>TCP面向字节流，具有流量控制，UDP面向报文，不具备流量控制，网络上出现拥塞不会使源主机的发送速率降低（如ip电话，实时视频会议等）；</li>
-<li>TCP连接只能点到点的，UDP支持一对一、一对多、多对一、多对多；</li>
-<li>TCP的逻辑通信信道是全双工的可靠信道，UDP则是不可靠信道；</li>
-<li>TCP首部开销20字节，UDP首部开销8个字节。</li>
-</ol>
+<p>现如今，数据无处不在，整理数据的第一步就是排序。常用的八种排序算法有：插入排序、希尔排序、选择排序、堆排序、冒泡排序、快速排序、归并排序和基数排序。下面我将依次总结各个排序算法。</p>
+<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a>Insertion Sort</h2><p><strong>Base Ideas:</strong></p>
+<p>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.</p>
+<p><strong>基本思想：</strong></p>
+<p>循环插入排序，每次重复使用一个输入元素，并增长排序后的输出列表。在每次循环中，插入排序从输入数据中移除一个元素，找到它在排序列表中的位置，将它插入到那里。重复此操作直到没有输入元素。</p>
+<p><img src="/Users/apach3/Downloads/Insertion-sort-example-300px.gif" alt="Insertion Sort"></p>
+<p><strong>Insertion sort code in C:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void insertion_sort(int arr[], int len) &#123;</span><br><span class="line">    for (int i = 1, j = 0 ; i &lt; len; ++i) &#123;    //compare (len - 1) times, until the last number left</span><br><span class="line">        int temp = arr[i];  //temp is the key number</span><br><span class="line">        for (j = i - 1; j &gt;= 0 &amp;&amp; arr[j] &gt; temp; --j)   //compare all numbers before the key number</span><br><span class="line">            arr[j + 1] = arr[j];    //find the value lager than the key number and insert it behind the key</span><br><span class="line">        arr[j + 1] = temp;     //insert the key number</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Best, worst, and average cases</strong></p>
+<p>The best case input is an array that is already sorted. In this case insertion sort has a linear running time (i.e., O(n)). During each iteration, the first remaining element of the input is only compared with the right-most element of the sorted subsection of the array.<br>The simplest worst case input is an array sorted in reverse order. The set of all worst case inputs consists of all arrays where each element is the smallest or second-smallest of the elements before it. In these cases every iteration of the inner loop will scan and shift the entire sorted subsection of the array before inserting the next element. This gives insertion sort a quadratic running time (i.e., O(n2)).<br>The average case is also quadratic, which makes insertion sort impractical for sorting large arrays. However, insertion sort is one of the fastest algorithms for sorting very small arrays, even faster than quicksort; indeed, good quicksort implementations use insertion sort for arrays smaller than a certain threshold, also when arising as subproblems; the exact threshold must be determined experimentally and depends on the machine, but is commonly around ten.</p>
+<p>最好的情况下就是数组已经是排好了序的。这种情况下插入排序具有线性运行时间（即时间复杂度O(n)）。每次迭代期间输入的第一个元素仅与排序数组的最右侧元素进行比较。<br>最简单的最坏情况是倒序排序的数组。每个元素是其之前元素的最小或次最小值。在这种情况下每次循环都会扫描并且移动这个数组整个排序的子部分。这种情况下的排序时间复杂度为二次的（即O(n^2)）。<br>平均情况下的时间复杂度也是二次的，这使得插入排序在排列大型数组的情况下是不切实际的。然而插入排序是排序非常小的数组最快的算法之一，甚至速度大过快速排序；实际上，好的快速排序对于小于某个阈值的数组的时候会使用插入排序，同样作为一个字问题出现的就是阈值必须通过实验来确定，取决于机器，但是通常在10左右。</p>
 <hr>
-<h2 id="HTTP-amp-HTTPS"><a href="#HTTP-amp-HTTPS" class="headerlink" title="HTTP&amp;HTTPS"></a>HTTP&amp;HTTPS</h2><p><strong>HTTP：</strong><br>    HTTP is one of the most widely used network protocols, a standard  for client and server-side request answering, which is used for the transfer protocol for the WWW servers to transfer hypertext to local browsers.<br><strong>HTTPS：</strong><br>    HTTPS is a security-targeted HTTP channel that joins the SSL layer under HTTP, and the security base of HTTPS is SSL, so the details of the encryption require SSL.</p>
-<ol>
-<li>HTTPS protocol requires the application of CA certificate, HTTP does’t need;</li>
-<li>HTTP is Hypertext Transfer Protocol, information is plaintext transmission, HTTPS is a secure SSL encryption transmission protocol;</li>
-<li>The connection mode and port number of both different, the former is 80, the latter is 443;</li>
-<li>HTTP connection is simple and unsafe, the HTTPS protocol is built by the SSL+HTTP protocol,and can be Encrypted Transmission、Identity Authentication, more secure.</li>
-</ol>
-<p><strong>HTTP：</strong><br>    互联网上使用最广泛的一种网络协议，是一个客户端和服务端请求应答的标准（TCP），用于WWW服务器传输超文本到本地浏览器的传输协议。<br><strong>HTTPS：</strong><br>    以安全为目标的HTTP通道，HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
-<ol>
-<li>HTTPS协议需要申请CA证书，http不需要；</li>
-<li>HTTP是超文本传输协议，信息是明文传输，HTTPS则是具有安全性的SSL加密传输协议；</li>
-<li>两者的连接方式和端口号也不同，前者为80，后者为443；</li>
-<li>HTTP连接简单不安全，HTTPS协议由SSL+HTTP协议构建的，可进行加密传输、身份认证的网络协议，更安全。</li>
-</ol>
-<hr>
-<h2 id="GET-amp-POST"><a href="#GET-amp-POST" class="headerlink" title="GET&amp;POST"></a>GET&amp;POST</h2><ol>
-<li>GET requests parameters remain in browser history because they are part of the URL, the POST requests parameters are not saved in browser history;</li>
-<li>GET requests can be bookmarked, POST can not be;</li>
-<li>GET requests are re-excuted but may not be re-submitted to server if the HTML is stored in the browser cache, under POST requests, the browser usually alerts the user that data will need to be re-submitted;</li>
-<li>GET requests can send parameters but the parameter data is limited to what we can stuff into the request link(URL), post requests can send parameters, including uploading files, to the server;</li>
-<li>GET is less secure compared to POST because data sent is part of the URL, POST is a little safer than GET because the parameters are not stored in browser history or in web server logs;</li>
-<li>POST requests has no restrictions on form data length;</li>
-</ol>
-<hr>
-<ol>
-<li>GET请求参数保留在浏览器历史记录中，为URL的一部分，POST请求参数不保存在浏览器历史记录中；</li>
-<li>GET请求可以作为书签，POST不可以；</li>
-<li>GET请求可重复执行，但如果HTML储存在浏览器缓存中，则可能不会重启提交到服务器，POST请求下浏览器通常会提醒用户需要重新提交数据；</li>
-<li>GET请求可以发送参数但仅限于在请求行中输入内容，POST可以将参数（包括上传文件）发送到服务器；</li>
-<li>GET与POST相比，获取的安全性较差，因为发送的数据是url的一部分，POST请求的这些参数不存储在浏览器历史记录或web服务器日志中；</li>
-<li>POST请求对表单数据长度无限制；</li>
-</ol>
-<hr>
-<p><strong>Stay hungry. Stay foolish.</strong></p>
 
       
     </div>
@@ -373,7 +335,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Computer-Network/" rel="tag"># Computer Network</a>
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
         </div>
       
@@ -386,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/10/iOS开发之属性关键字/" rel="next" title="Property Keywords For iOS Development">
-                <i class="fa fa-chevron-left"></i> Property Keywords For iOS Development
+              <a href="/2017/11/13/The-Differences-between-TCP-UDP-HTTP-HTTPS-GET-POST/" rel="next" title="The Differences between TCP&UDP/HTTP&HTTPS/GET&POST">
+                <i class="fa fa-chevron-left"></i> The Differences between TCP&UDP/HTTP&HTTPS/GET&POST
               </a>
             
           </div>
@@ -395,10 +357,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/15/Sort-Algorithm-Summary/" rel="prev" title="Sort Algorithm Summary">
-                Sort Algorithm Summary <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,7 +485,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-amp-UDP"><span class="nav-number">1.</span> <span class="nav-text">TCP&UDP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-amp-HTTPS"><span class="nav-number">2.</span> <span class="nav-text">HTTP&HTTPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GET-amp-POST"><span class="nav-number">3.</span> <span class="nav-text">GET&POST</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li></ol></div>
             
 
           </div>
