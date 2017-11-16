@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next mist use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -95,7 +95,7 @@
 <meta property="og:image" content="https://github.com/img/Shell-Sort2.svg">
 <meta property="og:image" content="https://github.com/img/Selection-Sort.gif">
 <meta property="og:image" content="https://github.com/img/Heap-sort.gif">
-<meta property="og:updated_time" content="2017-11-16T06:48:00.377Z">
+<meta property="og:updated_time" content="2017-11-16T07:02:03.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sort Algorithm Summary">
 <meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  ForewordNo">
@@ -107,9 +107,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -154,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -196,6 +196,36 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
           </a>
         </li>
       
@@ -382,6 +412,10 @@
 <p><strong>Heap sort code in C:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void swap(int* a, int* b) &#123;</span><br><span class="line">    int temp = *b;</span><br><span class="line">    *b = *a;</span><br><span class="line">    *a = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void max_heapify(int arr[], int start, int end) &#123;</span><br><span class="line">    //set up parent and sub-node index</span><br><span class="line">    int dad = start;</span><br><span class="line">    int son = dad * 2 + 1;</span><br><span class="line">    while (son &lt;= end) &#123;                //compared if sub-node index in range</span><br><span class="line">        if (son + 1 &lt;= end &amp;&amp; arr[son] &lt; arr[son + 1]) //compare two nodes, select the significant</span><br><span class="line">            son++;</span><br><span class="line">        if (arr[dad] &gt; arr[son]) //adjustment finished when parent node larger than sub-node, then jump out of the function</span><br><span class="line">            return;</span><br><span class="line">        else &#123;              //else exchange parent node and sub-node, then sub-node compared with sub-sub-node</span><br><span class="line">            swap(&amp;arr[dad], &amp;arr[son]);</span><br><span class="line">            dad = son;</span><br><span class="line">            son = dad * 2 + 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void heap_sort(int arr[], int len) &#123;</span><br><span class="line">    int i;</span><br><span class="line">    //init, i start with the last parent node</span><br><span class="line">    for (i = len / 2 - 1; i &gt;= 0; i--)</span><br><span class="line">        max_heapify(arr, i, len - 1);</span><br><span class="line">        //swap the first element with the previous one, and then adjust it until the end</span><br><span class="line">    for (i = len - 1; i &gt; 0; i--) &#123;</span><br><span class="line">        swap(&amp;arr[0], &amp;arr[i]);</span><br><span class="line">        max_heapify(arr, 0, i - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
+<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h2><hr>
+<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a>Quick Sort</h2><hr>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h2><hr>
+<h2 id="Radix-Sort"><a href="#Radix-Sort" class="headerlink" title="Radix Sort"></a>Radix Sort</h2><hr>
 <p>未完待续！</p>
 
       
@@ -560,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-Sort"><span class="nav-number">3.</span> <span class="nav-text">Shell Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selection-Sort"><span class="nav-number">4.</span> <span class="nav-text">Selection Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heap-Sort"><span class="nav-number">5.</span> <span class="nav-text">Heap Sort</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-Sort"><span class="nav-number">3.</span> <span class="nav-text">Shell Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selection-Sort"><span class="nav-number">4.</span> <span class="nav-text">Selection Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heap-Sort"><span class="nav-number">5.</span> <span class="nav-text">Heap Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bubble-Sort"><span class="nav-number">6.</span> <span class="nav-text">Bubble Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Sort"><span class="nav-number">7.</span> <span class="nav-text">Quick Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Merge-Sort"><span class="nav-number">8.</span> <span class="nav-text">Merge Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Radix-Sort"><span class="nav-number">9.</span> <span class="nav-text">Radix Sort</span></a></li></ol></div>
             
 
           </div>
@@ -598,7 +632,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
 
 
 
