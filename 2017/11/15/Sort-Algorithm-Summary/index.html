@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
+<meta name="description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  ForewordNo">
 <meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sort Algorithm Summary">
 <meta property="og:url" content="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/15/Sort-Algorithm-Summary/index.html">
 <meta property="og:site_name" content="Apach3&#39;s Blog">
-<meta property="og:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
+<meta property="og:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  ForewordNo">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://github.com/img/Insertion-Sort.gif">
 <meta property="og:image" content="https://github.com/img/Shell-Sort.gif">
@@ -94,10 +94,11 @@
 <meta property="og:image" content="https://github.com/img/Shell-Sort1.svg">
 <meta property="og:image" content="https://github.com/img/Shell-Sort2.svg">
 <meta property="og:image" content="https://github.com/img/Selection-Sort.gif">
-<meta property="og:updated_time" content="2017-11-16T02:40:30.700Z">
+<meta property="og:image" content="https://github.com/img/Heap-Sort.gif">
+<meta property="og:updated_time" content="2017-11-16T06:44:05.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sort Algorithm Summary">
-<meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  OverviewNo">
+<meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  ForewordNo">
 <meta name="twitter:image" content="https://github.com/img/Insertion-Sort.gif">
 
 
@@ -321,13 +322,13 @@
       
         <p><strong>Reference a lot of online information and summarized the various sorting algorithms, record the notes.</strong><br><strong>In the study stage, if has the question welcome to correct, discusses together.<a href="https://apach3q.github.io/" target="_blank" rel="external">@Apach3</a></strong></p>
 <hr>
-<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Nowadays, data is everywhere and sorting the data is the first step.There are eight kinds of commonly used sorting algorithms: Insertion  Sort、Shell Sort、Selection Sort、Heap Sort、Bubble Sort、Quick Sort、Merge Sort and Radix Sort.Next I will summarize each sorting algorithm.</p>
+<h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>Nowadays, data is everywhere and sorting the data is the first step.There are eight kinds of commonly used sorting algorithms: Insertion  Sort、Shell Sort、Selection Sort、Heap Sort、Bubble Sort、Quick Sort、Merge Sort and Radix Sort.Next I will summarize each sorting algorithm.</p>
 <a id="more"></a>
 <p>现如今，数据无处不在，整理数据的第一步就是排序。常用的八种排序算法有：插入排序、希尔排序、选择排序、堆排序、冒泡排序、快速排序、归并排序和基数排序。下面我将依次总结各个排序算法。</p>
 <hr>
-<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a>Insertion Sort</h2><p><strong>Base Ideas:</strong></p>
+<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a>Insertion Sort</h2><p><strong>Overview:</strong></p>
 <p>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.</p>
-<p><strong>基本思想：</strong></p>
+<p><strong>概述：</strong></p>
 <p>循环插入排序，每次重复使用一个输入元素，并增长排序后的输出列表。在每次循环中，插入排序从输入数据中移除一个元素，找到它在排序列表中的位置，将它插入到那里。重复此操作直到没有输入元素。</p>
 <p><img src="/img/Insertion-Sort.gif" alt="Insertion Sort"></p>
 <p><strong>Insertion Sort Code In C:</strong></p>
@@ -337,9 +338,9 @@
 <p><strong>最佳，最差和平均情况：</strong></p>
 <p>最好的情况下就是数组已经是排好了序的。这种情况下插入排序具有线性运行时间（即时间复杂度O(n)）。每次迭代期间输入的第一个元素仅与排序数组的最右侧元素进行比较。<br>最简单的最坏情况是倒序排序的数组。每个元素是其之前元素的最小或次最小值。在这种情况下每次循环都会扫描并且移动这个数组整个排序的子部分。这种情况下的排序时间复杂度为二次的（即O(n^2)）。<br>平均情况下的时间复杂度也是二次的，这使得插入排序在排列大型数组的情况下是不切实际的。然而插入排序是排序非常小的数组最快的算法之一，甚至速度大过快速排序；实际上，好的快速排序对于小于某个阈值的数组的时候会使用插入排序，同样作为一个字问题出现的就是阈值必须通过实验来确定，取决于机器，但是通常在10左右。</p>
 <hr>
-<h2 id="Shell-Sort"><a href="#Shell-Sort" class="headerlink" title="Shell Sort"></a>Shell Sort</h2><p><strong>Base Ideas:</strong></p>
+<h2 id="Shell-Sort"><a href="#Shell-Sort" class="headerlink" title="Shell Sort"></a>Shell Sort</h2><p><strong>Overview:</strong></p>
 <p>Shell sort can be seen as either a generalization of sorting by exchange (bubble sort) or sorting by insertion (insertion sort).The method starts by sorting pairs of elements far apart from each other, then progressively reducing the gap between elements to be compared. Starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange.The running time of Shell sort is heavily dependent on the gap sequence it uses. For many practical variants, determining their time complexity remains an open problem.</p>
-<p><strong>基本思想：</strong></p>
+<p><strong>概述：</strong></p>
 <p>希尔排序可以被看作是交换排序（冒泡排序）或插入排序的泛化。该方法通过对距离较远的一对元素进行排序，然后减少要比较元素之间的差距。从相距较远的元素开始，它可以将一些不适合的元素移动到比简单临近距离交换更快的位置。希尔排序的时间复杂度很大程度取决于它的间隙距离。对于很多实际的变体，确定时间复杂度仍是一个公开的问题。</p>
 <p><img src="/img/Shell-Sort.gif" alt="Shell Sort"></p>
 <p><strong>Shell Sort Code In C:</strong></p>
@@ -353,14 +354,33 @@
 <p><strong>时间复杂度：</strong></p>
 <p>最坏时间复杂度：根据步长序列的不同而不同。已知最差的：O(n^2)、最好的：O(nlog2n)<br>最优时间复杂度：O(nlogn)<br>平均时间复杂度：根据步长序列的不同而不同。</p>
 <hr>
-<h2 id="Selection-Sort"><a href="#Selection-Sort" class="headerlink" title="Selection Sort"></a>Selection Sort</h2><p><strong>Base Ideas:</strong></p>
+<h2 id="Selection-Sort"><a href="#Selection-Sort" class="headerlink" title="Selection Sort"></a>Selection Sort</h2><p><strong>Overview:</strong></p>
 <p>Selection sort is an in-place comparison sort. It has O(n^2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.<br>The algorithm divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list. Initially, the sorted sublist is empty and the unsorted sublist is the entire input list. The algorithm proceeds by finding the smallest (or largest, depending on sorting order) element in the unsorted sublist, exchanging (swapping) it with the leftmost unsorted element (putting it in sorted order), and moving the sublist boundaries one element to the right.</p>
-<p><strong>基本思想：</strong></p>
-<p>选择排序是一种就地比较排序。它有O(n^2)的时间复杂度，使其在大型列表上效率低下，并且通常比类似的插入排序更差。选择排序因其简单性，在某些情况下，特别是在辅助存储器有限的情况下，其具有比更复杂算法的性能优势。<br>该算法将输入列表分成两部分：已经排序的项目的子列表，其从列表的前部（左侧）从左到右构建，剩余的项目的子列表占据剩余的名单。最初，排序的子列表是空的，未排序的子列表是整个输入列表。该算法通过找到未排序的子列表中的最小（或最大，取决于排序顺序）元素，与最左边的未排序元素交换（交换）它（按照排序顺序），并且将子列表边界向右移动一个元素。</p>
-<p><img src="/img/Selection-Sort.gif" alt="Shell Sort"></p>
-<p><strong>Selection sort code in C:</strong></p>
+<p><strong>概述：</strong></p>
+<p>选择排序是一种就地的比较排序。它有O(n^2)的时间复杂度，使其在大型列表上效率低下，并且通常比类似的插入排序更差。选择排序因其简单性，在某些情况下，特别是在辅助存储器有限的情况下，其具有比更复杂算法的性能优势。<br>该算法将输入列表分成两部分：已经排序的项目的子列表，其从列表的前部（左侧）从左到右构建，剩余的项目的子列表占据剩余的名单。最初，排序的子列表是空的，未排序的子列表是整个输入列表。该算法通过找到未排序的子列表中的最小（或最大，取决于排序顺序）元素，与最左边的未排序元素交换（交换）它（按照排序顺序），并且将子列表边界向右移动一个元素。</p>
+<p><img src="/img/Selection-Sort.gif" alt="Selection Sort"></p>
+<p><strong>Selection Sort Code In C:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">void swap(int *a,int *b) &#123;          //used to swap two integers</span><br><span class="line">    int temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void selection_sort(int arr[], int len) &#123;</span><br><span class="line">    for (int i = 0,min = 0 ; i &lt; len - 1; i++) &#123;</span><br><span class="line">        min = i;</span><br><span class="line">        for (int j = i + 1; j &lt; len; j++) &#123;    //traverse unsorted elements</span><br><span class="line">            if (arr[min] &lt; arr[j]) &#123;   //find the current minimum</span><br><span class="line">                min = j;        //record the subscript value</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(&amp;arr[min], &amp;arr[i]);    //exchange the value</span><br><span class="line">    &#125;    //the end of each loop will make the beginning of the array to form an ordered sequence</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
+<h2 id="Heap-Sort"><a href="#Heap-Sort" class="headerlink" title="Heap Sort"></a>Heap Sort</h2><p><strong>Overview:</strong></p>
+<p>Heap sort can be thought of as an improved selection sort. Although somewhat slower in practice on most machines than a well-implemented quicksort, it has the advantage of a more favorable worst-case O(nlogn) runtime. Heapsort is an in-place algorithm, but it is not a stable sort.</p>
+<p><strong>概述：</strong></p>
+<p>堆排序被认为是改进的选择排序。尽管有时候在大多数机器上的实践比快速排序稍慢，但它具有最优的最坏情况O(nlogn)时间复杂度的特点。堆排序是一个就地算法，但是一个不稳定的排序。</p>
+<p><strong>Algorithm:</strong></p>
+<p>The Heap sort algorithm can be divided into two parts.<br>In the first step, a heap is built out of the data. The heap is often placed in an array with the layout of a complete binary tree. The complete binary tree maps the binary tree structure into the array indices; each array index represents a node; the index of the node’s parent, left child branch, or right child branch are simple expressions. For a zero-based array, the root node is stored at index 0; if i is the index of the current node, then<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iParent(i) = floor((i-1) / 2) where floor functions map a real number to the smallest leading integer.</span><br><span class="line">iLeftChild(i)  = 2*i + 1</span><br><span class="line">iRightChild(i) = 2*i + 2</span><br></pre></td></tr></table></figure></p>
+<p>In the second step, a sorted array is created by repeatedly removing the largest element from the heap (the root of the heap), and inserting it into the array. The heap is updated after each removal to maintain the heap property. Once all objects have been removed from the heap, the result is a sorted array.<br>Therefore, two problems need to be solved:<br>(1) How to build a heap?<br>(2) How to adjust the remaining (n-1) elements to make it a new heap?</p>
+<p>The way to build a heap:<br>A complete binary tree have n nodes, the last node is the n/2 th node of the sub-tree, filter start from n/2 th node and then fliter the nodes to the root sub-tree, make each to be a heap until the root node.</p>
+<p>The way to adjust and build a new heap:<br>Outputs the top element of the heap, moving the heap bottom element to the location of the original heap top element. Decide it if a heap, by building heap method, adjust to a heap.</p>
+<p>As show below:</p>
+<p><img src="/img/Heap-Sort.gif" alt="Heap Sort"></p>
+<p><strong>算法：</strong></p>
+<p>堆排序算法可以分为两部分。<br>在第一步中，一个堆是建立在数据之外的。堆常常放在一个完整的二叉树布局的数组中。完整的二叉树将二叉树结构映射到数组索引; 每个数组索引代表一个节点; 节点的父节点，左节点子节点或右节点子节点的索引是简单表达式。对于从零开始的数组，根节点存储在索引0; 如果i是当前节点的索引，那么<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iParent（i）= floor（（i-1）/ 2）其中floor函数将实数映射到最小的前导整数。</span><br><span class="line">iLeftChild（i）= 2 * i + 1</span><br><span class="line">iRightChild（i）= 2 * i + 2</span><br></pre></td></tr></table></figure></p>
+<p>在第二步中，通过反复从堆（堆的根）中删除最大的元素，并将其插入到数组中，创建一个有序的数组。每次移除堆后都会更新堆以维护堆属性。一旦所有对象都从堆中移除，结果是一个有序的数组。<br>因此需要解决两个问题：<br>（1） 如何建堆？<br>（2） 如何调整剩余（n-1）个元素使其成为一个新堆？</p>
+<p>建堆的方法：<br>n个结点的完全二叉树，最后一个结点是第n / 2个个结点的子树，筛选从n / 2个结点开始，依次向前对各结点为根对子树进行筛选，使之成为堆，直到根结点。</p>
+<p>调整构建新堆的办法：<br>输出堆的顶部元素，将堆底部元素移动到原始堆顶部元素的位置。判断是否为堆，通过生成堆方法，调整为堆。</p>
+<p>如上图所示。</p>
+<p><strong>Heap sort code in C:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void swap(int* a, int* b) &#123;</span><br><span class="line">    int temp = *b;</span><br><span class="line">    *b = *a;</span><br><span class="line">    *a = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void max_heapify(int arr[], int start, int end) &#123;</span><br><span class="line">    //set up parent and sub-node index</span><br><span class="line">    int dad = start;</span><br><span class="line">    int son = dad * 2 + 1;</span><br><span class="line">    while (son &lt;= end) &#123;                //compared if sub-node index in range</span><br><span class="line">        if (son + 1 &lt;= end &amp;&amp; arr[son] &lt; arr[son + 1]) //compare two nodes, select the significant</span><br><span class="line">            son++;</span><br><span class="line">        if (arr[dad] &gt; arr[son]) //adjustment finished when parent node larger than sub-node, then jump out of the function</span><br><span class="line">            return;</span><br><span class="line">        else &#123;              //else exchange parent node and sub-node, then sub-node compared with sub-sub-node</span><br><span class="line">            swap(&amp;arr[dad], &amp;arr[son]);</span><br><span class="line">            dad = son;</span><br><span class="line">            son = dad * 2 + 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void heap_sort(int arr[], int len) &#123;</span><br><span class="line">    int i;</span><br><span class="line">    //init, i start with the last parent node</span><br><span class="line">    for (i = len / 2 - 1; i &gt;= 0; i--)</span><br><span class="line">        max_heapify(arr, i, len - 1);</span><br><span class="line">        //swap the first element with the previous one, and then adjust it until the end</span><br><span class="line">    for (i = len - 1; i &gt; 0; i--) &#123;</span><br><span class="line">        swap(&amp;arr[0], &amp;arr[i]);</span><br><span class="line">        max_heapify(arr, 0, i - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p>未完待续！</p>
 
@@ -540,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-Sort"><span class="nav-number">3.</span> <span class="nav-text">Shell Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selection-Sort"><span class="nav-number">4.</span> <span class="nav-text">Selection Sort</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-Sort"><span class="nav-number">3.</span> <span class="nav-text">Shell Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selection-Sort"><span class="nav-number">4.</span> <span class="nav-text">Selection Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heap-Sort"><span class="nav-number">5.</span> <span class="nav-text">Heap Sort</span></a></li></ol></div>
             
 
           </div>
