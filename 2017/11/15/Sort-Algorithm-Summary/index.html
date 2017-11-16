@@ -94,8 +94,8 @@
 <meta property="og:image" content="https://github.com/img/Shell-Sort1.svg">
 <meta property="og:image" content="https://github.com/img/Shell-Sort2.svg">
 <meta property="og:image" content="https://github.com/img/Selection-Sort.gif">
-<meta property="og:image" content="https://github.com/img/Heap-Sort.gif">
-<meta property="og:updated_time" content="2017-11-16T06:44:05.533Z">
+<meta property="og:image" content="https://github.com/img/Heap-sort.gif">
+<meta property="og:updated_time" content="2017-11-16T06:48:00.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sort Algorithm Summary">
 <meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  ForewordNo">
@@ -372,7 +372,7 @@
 <p>The way to build a heap:<br>A complete binary tree have n nodes, the last node is the n/2 th node of the sub-tree, filter start from n/2 th node and then fliter the nodes to the root sub-tree, make each to be a heap until the root node.</p>
 <p>The way to adjust and build a new heap:<br>Outputs the top element of the heap, moving the heap bottom element to the location of the original heap top element. Decide it if a heap, by building heap method, adjust to a heap.</p>
 <p>As show below:</p>
-<p><img src="/img/Heap-Sort.gif" alt="Heap Sort"></p>
+<p><img src="/img/Heap-sort.gif" alt="Heap Sort"></p>
 <p><strong>算法：</strong></p>
 <p>堆排序算法可以分为两部分。<br>在第一步中，一个堆是建立在数据之外的。堆常常放在一个完整的二叉树布局的数组中。完整的二叉树将二叉树结构映射到数组索引; 每个数组索引代表一个节点; 节点的父节点，左节点子节点或右节点子节点的索引是简单表达式。对于从零开始的数组，根节点存储在索引0; 如果i是当前节点的索引，那么<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iParent（i）= floor（（i-1）/ 2）其中floor函数将实数映射到最小的前导整数。</span><br><span class="line">iLeftChild（i）= 2 * i + 1</span><br><span class="line">iRightChild（i）= 2 * i + 2</span><br></pre></td></tr></table></figure></p>
 <p>在第二步中，通过反复从堆（堆的根）中删除最大的元素，并将其插入到数组中，创建一个有序的数组。每次移除堆后都会更新堆以维护堆属性。一旦所有对象都从堆中移除，结果是一个有序的数组。<br>因此需要解决两个问题：<br>（1） 如何建堆？<br>（2） 如何调整剩余（n-1）个元素使其成为一个新堆？</p>
