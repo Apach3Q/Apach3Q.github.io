@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="iOS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel;">
-<meta name="keywords" content="iOS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Property Keywords For iOS Development">
-<meta property="og:url" content="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/10/iOS开发之属性关键字/index.html">
+<meta name="description" content="Stay hungry, stay foolish.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="https://github.com/Apach3Q/Apach3Q.github.io.git/about/index.html">
 <meta property="og:site_name" content="Apach3&#39;s Blog">
-<meta property="og:description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel;">
+<meta property="og:description" content="Stay hungry, stay foolish.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-13T09:38:03.502Z">
+<meta property="og:updated_time" content="2017-11-16T07:28:26.606Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Property Keywords For iOS Development">
-<meta name="twitter:description" content="学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。@Apach3  现在最常用的写法就是： 1@property (nonatomic, strong) UILable *myLabel;">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="Stay hungry, stay foolish.">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/10/iOS开发之属性关键字/"/>
+  <link rel="canonical" href="https://github.com/Apach3Q/Apach3Q.github.io.git/about/"/>
 
 
 
 
 
-  <title>Property Keywords For iOS Development | Apach3's Blog</title>
+  <title>about | Apach3's Blog</title>
   
 
 
@@ -251,182 +250,33 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/10/iOS开发之属性关键字/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Apach3">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/icon.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Apach3's Blog">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">Property Keywords For iOS Development</h1>
-        
+	<h1 class="post-title" itemprop="name headline">about</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T17:34:05+08:00">
-                2017-11-10
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/11/10/iOS开发之属性关键字/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/10/iOS开发之属性关键字/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <p><strong>学习了下关于iOS属性关键字，最近面试经常会遇到相关问题，记录下笔记。</strong><br><strong>学习阶段，如果哪部分有问题，欢迎指正，共同探讨。<a href="https://apach3q.github.io/" target="_blank" rel="external">@Apach3</a></strong></p>
-<hr>
-<p>现在最常用的写法就是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property (nonatomic, strong) UILable *myLabel;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>定义一个UILabel，依次解读下：</p>
-<p><code>@property</code>：<br>程序在编译阶段自动生成<code>getter</code>和<code>setter</code>方法。我理解的就是 <code>@property……</code>一句话，就代替了声明成员变量、属性、再<code>@synthesize 成员变量 = _对应属性;</code>。这样剩去了好多行代码，还可以在属性关键字设置相应的作用。</p>
-<p><code>(……)</code>：<br>括号内的是属性关键字。对于普通OC对象来说，默认的修饰符是<code>atomic</code>、<code>strong</code>、<code>readwrite</code>；对于基本数据类型来说，默认修饰符是<code>nonatomic</code>、<code>assign</code>、<code>readwrite</code>。</p>
-<p>括号后面的就是数据类型还有相关名称。</p>
-<hr>
-<p><strong>着重把自己理解的各个属性关键字解释一下，面试的时候按这么说基本不会挂。</strong></p>
-<p><code>readwrite</code>：<br>可读可写属性，默认是这个属性，系统会自动生成<code>getter</code>和<code>setter</code>方法。</p>
-<p><code>readonly</code>：<br>可读属性，不可写。自动生成<code>getter</code>方法不生成<code>setter</code>方法。</p>
-<p><code>nonatomic</code>：<br>非原子属性，线程不安全的，无锁。但更经常用<code>nonatomic</code>，在多线程并发访问时会提高性能。</p>
-<p><code>atomic</code>：<br>原子属性，线程安全，有锁。</p>
-<p><code>copy</code>：<br>建立一个索引计数为1的对象，在赋值时，使用传入值的一份拷贝。</p>
-<p><code>retain</code>：<br>表示持有属性，强引用，当前对象在被其他对象调用的时候引用计数会自动+1，直到引用计数变为0才会被销毁。<code>setter</code>方法中，读取对象先<code>release</code>，再进行<code>retain</code>操作。</p>
-<p><code>assign</code>：<br>表示赋值属性，应用于基本数据类型，因为基本数据类型是被分配在栈上的某块内存，栈上的内存是由系统自动分配，所以不会出现野指针。<code>setter</code>方法直接赋值，当对象被销毁后，指针不会自动赋<code>nil</code>，会出现野指针。</p>
-<p><code>strong</code>：<br>表示强引用，<code>ARC</code>下使用。当前对象被其他对象调用时引用计数会自动+1，相当于<code>retain</code>。同<code>copy</code>不同的是，<code>strong</code>是两个指针指向同一块内存空间，而<code>copy</code>是拷贝了一份新的空间，两个指针指向不同的内存地址。</p>
-<p><code>weak</code>：<br>表示弱引用，<code>ARC</code>下使用。当前对象的生命周期不被是否由其他对象引用限制，它本该什么时候销毁就什么时候被销毁。即使它的引用没断，但是当它的生存周期到了时就会被销毁。当对象被销毁后，指针自动赋<code>nil</code>。常用在<code>delegate</code>、连线上，防止循环引用。</p>
-<hr>
-<p><strong>刚开始学习这部分的时候，还不是特别理解。后来组对记忆，发现有相似的地方，有<code>MRC</code>转<code>ARC</code>的变化，也有强弱之间的对比，还有相应的一些小对比，瞬间记得变快了。</strong></p>
-<hr>
-<p><strong>Stay hungry. Stay foolish.</strong></p>
-
+      <div class="post-body">
+        
+        
+          
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/iOS/" rel="tag"># iOS</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/11/10/hello-world/" rel="next" title="My First Blog">
-                <i class="fa fa-chevron-left"></i> My First Blog
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/13/The-Differences-between-TCP-UDP-HTTP-HTTPS-GET-POST/" rel="prev" title="The Differences between TCP&UDP/HTTP&HTTPS/GET&POST">
-                The Differences between TCP&UDP/HTTP&HTTPS/GET&POST <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -691,9 +541,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://github.com/Apach3Q/Apach3Q.github.io.git/2017/11/10/iOS开发之属性关键字/';
-          this.page.identifier = '2017/11/10/iOS开发之属性关键字/';
-          this.page.title = 'Property Keywords For iOS Development';
+          this.page.url = 'https://github.com/Apach3Q/Apach3Q.github.io.git/about/index.html';
+          this.page.identifier = 'about/index.html';
+          this.page.title = 'about';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
