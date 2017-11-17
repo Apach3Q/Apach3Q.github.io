@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://apach3q.github.io.git/img/Merge-Sort.gif">
 <meta property="og:image" content="https://apach3q.github.io.git/img/Summarize-1.png">
 <meta property="og:image" content="https://apach3q.github.io.git/img/Summarize-2.png">
-<meta property="og:updated_time" content="2017-11-17T08:43:16.944Z">
+<meta property="og:updated_time" content="2017-11-17T09:21:09.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sort Algorithm Summary">
 <meta name="twitter:description" content="Reference a lot of online information and summarized the various sorting algorithms, record the notes.In the study stage, if has the question welcome to correct, discusses together.@Apach3  ForewordNo">
@@ -446,7 +446,6 @@
 <p><img src="/img/Bubble-Sort.gif" alt="Bubble Sort"></p>
 <p><strong>Bubble sort code in C:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void bubble_sort(int arr[], int len) &#123;</span><br><span class="line">    int i, j, temp;</span><br><span class="line">    for (i = 0; i &lt; len - 1; i++)</span><br><span class="line">        for (j = 0; j &lt; len - 1 - i; j++)</span><br><span class="line">            if (arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">                temp = arr[j];</span><br><span class="line">                arr[j] = arr[j + 1];</span><br><span class="line">                arr[j + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
 <hr>
 <h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a>Quick Sort</h2><p><strong>Overview:</strong><br>Quick sort sometimes called partition-exchange sort, Developed by Tony Hoare.  on average, the algorithm takes O(nlogn) comparisons to sort n items. In the worst case, it makes O(n^2) comparisons, though this behavior is rare. In fact qucik sort is usually faster than other O(nlogn) algorithm because its inner loop can be efficiently implemented on most architectures.</p>
 <p><strong>概述：</strong><br>快速排序，又称划分交换排序，最早由东尼·霍尔提出。在平均状况下，排序n个项目要O(nlogn)次比较。在最坏状况下则需要O(n^2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他O(nlogn)算法更快，因为它的内部循环可以在大部分的架构上很有效率地被实现出来。</p>
