@@ -376,8 +376,7 @@
 
       
         
-          
-            <h2 id="下载安装git"><a href="#下载安装git" class="headerlink" title="下载安装git"></a>下载安装git</h2><hr>
+          <h2 id="下载安装git"><a href="#下载安装git" class="headerlink" title="下载安装git"></a>下载安装git</h2><hr>
 <h2 id="创建新仓库"><a href="#创建新仓库" class="headerlink" title="创建新仓库"></a>创建新仓库</h2><ul>
 <li>创建新文件夹，打开。</li>
 <li>terminal内cd进入此目录，执行：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
@@ -385,93 +384,13 @@
 </ul>
 <p>创建新的git仓库。</p>
 <hr>
-<h2 id="检出仓库"><a href="#检出仓库" class="headerlink" title="检出仓库"></a>检出仓库</h2><ul>
-<li><p>创建本地仓库的克隆版本，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone /path/to/repository</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建远程仓库的克隆版本，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone username@host:/path/to/repository</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>本地git仓库由三部分组成：</p>
-<ul>
-<li>工作目录（Working directory），持有实际文件；</li>
-<li>暂存区（Index），缓存区，临时保存改动；</li>
-<li>HEAD，指向最后一次提交的结果。</li>
-</ul>
-<hr>
-<h2 id="添加和提交"><a href="#添加和提交" class="headerlink" title="添加和提交"></a>添加和提交</h2><ul>
-<li><p>添加到暂存区Index，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;filename&gt;</span><br><span class="line">git add *</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>提交改动到HEAD，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;代码提交信息&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="推送改动"><a href="#推送改动" class="headerlink" title="推送改动"></a>推送改动</h2><ul>
-<li><p>将改动提交到远程仓库（master为任意分支），执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果未克隆现有仓库，欲将仓库连接远程服务器，可以用如下命令添加。执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;server&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>分支用于某一特性功能的绝缘开发，创建仓库的时候默认是master分支。需要在其他分支上进行，完成后再合并到master分支上。</p>
-<ul>
-<li><p>创建一个newBranch分支，并切换过去，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b newBranch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>切换回主分支，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除新建的分支，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d newBranch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>除非将分支推送到远程仓库，否则该分支是不为他人所见的。执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;branch&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="更新与合并"><a href="#更新与合并" class="headerlink" title="更新与合并"></a>更新与合并</h2><ul>
-<li><p>要更新本地仓库为最新版，以在工作目录中获取（fetch）和合并（merge）远程的改动，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>要合并其他分支到你的当前分支（例如master），执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>这两种情况下，git都会尝试去自动合并改动，但有可能会发生冲突，这时候需要手动修改合并冲突。改完之后，标记合并成功，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>合并改动前，预览差异，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;source_branch&gt; &lt;target_branch&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ul>
-<li><p>为软件发布创建标签，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取提交ID，创建一个叫1.0.0的标签，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag 1.0.0 提交ID前10位</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h2><ul>
-<li>假如操作失误，替换掉本地版本，执行：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>此命令会使HEAD中的最新内容替换掉你的工作目录中的文件。添加到暂存区的改动以及新文件不会受到影响。</p>
-<ul>
-<li>假如想丢弃你在本地的所有改动与提交，可以到服务器上获取最新的版本历史，并将本地主分支指向它，执行：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br><span class="line">git reset --hard origin/master</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>Stay hungry.Stay foolish.</strong></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/24/Simple-Use-Of-GIT-By-Command-line/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
