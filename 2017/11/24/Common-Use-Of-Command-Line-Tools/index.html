@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="跳转到跟路径某文件夹中：/...(跳到位置的路径)...```12**显示当前文件夹下所有文件：**```ls /...(要显示文件夹的路径)... 拷贝文件：-R/...(目的路径)...```12**删除文件：**```rm -rf /...(要删除文件的路径)... 移动文件：/...(源路径)...link12**打开文本编辑：**```vim /...(文件路径)... 插入模式：12*">
+<meta name="description" content="跳转到跟路径某文件夹中：1cd /...(跳到位置的路径)... 显示当前文件夹下所有文件：1ls /...(要显示文件夹的路径)... 拷贝文件：1cp -R /...(源路径)... /...(目的路径)... 删除文件：1rm -rf /...(要删除文件的路径)... 移动文件：1mv /...(源路径)... /...(目的路径)... 打开文本编辑：1vim /...(文件路径)...">
 <meta name="keywords" content="Others">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Common Use Of Command Line Tools">
 <meta property="og:url" content="https://Apach3Q.github.io.git/2017/11/24/Common-Use-Of-Command-Line-Tools/index.html">
 <meta property="og:site_name" content="Apach3&#39;s Blog">
-<meta property="og:description" content="跳转到跟路径某文件夹中：/...(跳到位置的路径)...```12**显示当前文件夹下所有文件：**```ls /...(要显示文件夹的路径)... 拷贝文件：-R/...(目的路径)...```12**删除文件：**```rm -rf /...(要删除文件的路径)... 移动文件：/...(源路径)...link12**打开文本编辑：**```vim /...(文件路径)... 插入模式：12*">
+<meta property="og:description" content="跳转到跟路径某文件夹中：1cd /...(跳到位置的路径)... 显示当前文件夹下所有文件：1ls /...(要显示文件夹的路径)... 拷贝文件：1cp -R /...(源路径)... /...(目的路径)... 删除文件：1rm -rf /...(要删除文件的路径)... 移动文件：1mv /...(源路径)... /...(目的路径)... 打开文本编辑：1vim /...(文件路径)...">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-24T02:46:18.719Z">
+<meta property="og:updated_time" content="2017-11-24T02:52:40.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Common Use Of Command Line Tools">
-<meta name="twitter:description" content="跳转到跟路径某文件夹中：/...(跳到位置的路径)...```12**显示当前文件夹下所有文件：**```ls /...(要显示文件夹的路径)... 拷贝文件：-R/...(目的路径)...```12**删除文件：**```rm -rf /...(要删除文件的路径)... 移动文件：/...(源路径)...link12**打开文本编辑：**```vim /...(文件路径)... 插入模式：12*">
+<meta name="twitter:description" content="跳转到跟路径某文件夹中：1cd /...(跳到位置的路径)... 显示当前文件夹下所有文件：1ls /...(要显示文件夹的路径)... 拷贝文件：1cp -R /...(源路径)... /...(目的路径)... 删除文件：1rm -rf /...(要删除文件的路径)... 移动文件：1mv /...(源路径)... /...(目的路径)... 打开文本编辑：1vim /...(文件路径)...">
 
 
 
@@ -374,10 +374,15 @@
       
 
       
-        <p><strong>跳转到跟路径某文件夹中：</strong><figure class="highlight plain"><figcaption><span>/...(跳到位置的路径)...```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**显示当前文件夹下所有文件：**```ls /...(要显示文件夹的路径)...</span><br></pre></td></tr></table></figure></p>
-<p><strong>拷贝文件：</strong><figure class="highlight plain"><figcaption><span>-R</span><a href="/...(源路径)...">/...(目的路径)...```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**删除文件：**```rm -rf /...(要删除文件的路径)...</span><br></pre></td></tr></table></figure></p>
-<p><strong>移动文件：</strong><figure class="highlight plain"><figcaption><span>/...(源路径)...</span><a href="/...(目的路径)...```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**打开文本编辑：**```vim /...(文件路径)...</span><br></pre></td></tr></table></figure></p>
-<p><strong>插入模式：</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**保存退出：**```ESC```  ```:wq</span><br></pre></td></tr></table></figure></p>
+        <p><strong>跳转到跟路径某文件夹中：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /...(跳到位置的路径)...</span><br></pre></td></tr></table></figure></p>
+<p><strong>显示当前文件夹下所有文件：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /...(要显示文件夹的路径)...</span><br></pre></td></tr></table></figure></p>
+<p><strong>拷贝文件：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -R /...(源路径)... /...(目的路径)...</span><br></pre></td></tr></table></figure></p>
+<p><strong>删除文件：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /...(要删除文件的路径)...</span><br></pre></td></tr></table></figure></p>
+<p><strong>移动文件：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /...(源路径)... /...(目的路径)...</span><br></pre></td></tr></table></figure></p>
+<p><strong>打开文本编辑：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /...(文件路径)...</span><br></pre></td></tr></table></figure></p>
+<p><strong>插入模式：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i(左下角显示--INSERT--)</span><br></pre></td></tr></table></figure></p>
+<p><strong>保存退出：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ESC</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:wq</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p><strong>更新hexo博客：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /Users/apach3/Downloads/Development\ Projects/blog</span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;FileName&quot;</span><br></pre></td></tr></table></figure>
