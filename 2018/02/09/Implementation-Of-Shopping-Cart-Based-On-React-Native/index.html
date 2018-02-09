@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -80,6 +80,7 @@
 
 
 <meta name="description" content="最近从事React Native开发，有需求是做购物车界面。在网上查询了一番，大多都是单层的购物车，即局部单选和多选。但是主流的购物车界面都是有店铺单选、多选及商品的单选和多选的，所以用自己所学知识自己写了一个双层的购物车。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。  我设计的时候是这样想的：1. 页面分为三部分：导航栏、商品栏、价格栏；2. 商品栏用FlatList实现，每个店铺都是对应的">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Implementation Of Shopping Cart Based On React-Native">
 <meta property="og:url" content="https://Apach3Q.github.io.git/2018/02/09/Implementation-Of-Shopping-Cart-Based-On-React-Native/index.html">
@@ -89,7 +90,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20180208180013813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzA3MTg4Mjc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="http://img.blog.csdn.net/20180208180028169?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzA3MTg4Mjc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="http://img.blog.csdn.net/20180208180043299?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzA3MTg4Mjc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2018-02-09T14:15:42.907Z">
+<meta property="og:updated_time" content="2018-02-09T14:18:33.789Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Implementation Of Shopping Cart Based On React-Native">
 <meta name="twitter:description" content="最近从事React Native开发，有需求是做购物车界面。在网上查询了一番，大多都是单层的购物车，即局部单选和多选。但是主流的购物车界面都是有店铺单选、多选及商品的单选和多选的，所以用自己所学知识自己写了一个双层的购物车。学习阶段，如果哪部分有问题，欢迎指正，共同探讨。  我设计的时候是这样想的：1. 页面分为三部分：导航栏、商品栏、价格栏；2. 商品栏用FlatList实现，每个店铺都是对应的">
@@ -306,6 +307,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -359,6 +382,7 @@
 <hr>
 <p><strong>我设计的时候是这样想的：</strong><br><strong>1. 页面分为三部分：导航栏、商品栏、价格栏；</strong><br><strong>2. 商品栏用FlatList实现，每个店铺都是对应的row；</strong><br><strong>3. 将不同商品push进数组里，然后返回给每个row；</strong><br><strong>4. 在最底层页面拿到数据，对数据处理，根据店铺分类，再将不同的店铺及商品追加对象字段select: true/false；</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">handleData = (array) =&gt; &#123;//处理数据格式</span><br><span class="line">let nameArray = []; //  店名数组</span><br><span class="line">array.map(</span><br><span class="line">(item) =&gt; &#123;</span><br><span class="line">nameArray.push(item.storeName);</span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line">let storeNameArray = Array.from(new Set(nameArray));</span><br><span class="line">this.shopObjArray = [];</span><br><span class="line">storeNameArray.map(</span><br><span class="line">(item) =&gt; &#123;</span><br><span class="line">this.shopObjArray.push(&#123;storeName: item, data: [], select: false&#125;);</span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line">array.map(</span><br><span class="line">(item) =&gt; &#123;</span><br><span class="line">for (let i = 0; i &lt; this.shopObjArray.length; i++) &#123;</span><br><span class="line">if (this.shopObjArray[i].storeName == item.storeName) &#123;</span><br><span class="line">this.shopObjArray[i].data.push(&#123;data: item, select: false, number: 1&#125;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line">this.loading = false;</span><br><span class="line">this.refs.buylist.judgeLoading(this.loading);</span><br><span class="line">this.refs.buylist.freshData(this.shopObjArray);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p><strong>5. 每个组件内容的值，均由最底层页面通过ref调用该类方法，传值过去刷新相应区域；</strong><br><strong>6. 点击全选后，回调去更新数据源对应的state，再将相应改变的部分新数据源传给对应组件，通过ref调用方法刷新组件；</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">changeHeaderData = (index) =&gt; &#123;//点击店铺头部全选对应数据操作</span><br><span class="line">let newStatus = !this.shopObjArray[index].select</span><br><span class="line">this.shopObjArray[index].select = newStatus;</span><br><span class="line">this.shopObjArray[index].data.map(</span><br><span class="line">(item, index) =&gt; &#123;</span><br><span class="line">item.select = newStatus;</span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line">this.refs.buylist.reRenderStore(this.shopObjArray[index], index);</span><br><span class="line">this.judgeStoreCheck();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>7. 点击单选后，回调去更新数据源对应state，同时判断是否该店铺下商品全部已被单选，如果全被单选则更新店铺全选按钮，反之不更新；</strong></p>
@@ -370,6 +394,8 @@
 <p><strong>简易效果：</strong><br><img src="http://img.blog.csdn.net/20180208180013813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzA3MTg4Mjc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="效果图1"><br><img src="http://img.blog.csdn.net/20180208180028169?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzA3MTg4Mjc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="效果图2"><br><img src="http://img.blog.csdn.net/20180208180043299?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzA3MTg4Mjc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="效果图3"></p>
 <hr>
 <p><strong>项目github地址：<a href="https://github.com/Apach3Q/ShoppingCartDemo.git" target="_blank" rel="external">ShoppingCartDemo</a></strong></p>
+<hr>
+<p><strong>Stay hungry.Stay foolish.</strong></p>
 
       
     </div>
@@ -384,6 +410,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+        </div>
       
 
       
